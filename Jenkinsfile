@@ -14,6 +14,14 @@ node('worker_node') {
 			      stage('deploy') {
 			                
 					         sh 'python test.py'
+				                 properties([
+  pipelineTriggers([
+    upstream(
+      threshold: hudson.model.Result.SUCCESS,
+      upstreamProjects: 'Job1'
+    )
+  ])
+])
 						 	 
 
 
