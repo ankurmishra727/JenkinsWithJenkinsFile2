@@ -18,7 +18,7 @@ node('worker_node') {
   pipelineTriggers([
     upstream(
       threshold: hudson.model.Result.SUCCESS,
-      upstreamProjects: 'Job1'
+      upstreamProjects: 'Git_Simple_1'
     )
   ])
 ])
