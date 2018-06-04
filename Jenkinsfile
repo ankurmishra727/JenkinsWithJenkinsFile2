@@ -13,12 +13,7 @@ node('worker_node') {
 
 			      stage('deploy') {
 			                
-					         sh 'python test.py'
-				      
-				      
-				      def choice = input message: '<message>', 
-                                      parameters: [choice(choices: "choice1\nchoice2\nchoice3\nchoice4\n",
-                                      description: 'Choose an option', name: 'Options')]
+			     sh 'python test.py'
 				      
 				      
 				      
